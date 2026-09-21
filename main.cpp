@@ -14,6 +14,14 @@ double fToC(double f) {
     return (f - 32.0) * 5.0 / 9.0;
 }
 
+double cToK(double c) {
+    return c + 273.15;
+}
+
+double kToC(double k) {
+    return k - 273.15;
+}
+
 int main() {
     setlocale(LC_ALL, "Russian");
     int choice;
@@ -36,6 +44,21 @@ int main() {
             cout << "Введите температуру в Фаренгейтах: ";
             cin >> value;
             cout << value << " °F = " << fToC(value) << " °C\n";
+            break;
+        case 3:
+            cout << "Введите температуру в Цельсиях: ";
+            cin >> value;
+            cout << value << " °C = " << cToK(value) << " K\n";
+            break;
+        case 4:
+            cout << "Введите температуру в Кельвинах: ";
+            cin >> value;
+            if (value < 0) {
+                cout << "Ошибка: температура не может быть ниже 0 K\n";
+            }
+            else {
+                cout << value << " K = " << kToC(value) << " °C\n";
+            }
             break;
         case 0:
             cout << "Работа завершена.\n";
