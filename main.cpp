@@ -23,16 +23,18 @@ double kToC(double k) {
 }
 
 int main() {
-    cout << "\n══════════════════════════════════════╗\n";
-    cout << "║  КОНВЕРТЕР ТЕМПЕРАТУР (Вариант 61)  ║\n";
-    cout << "╚══════════════════════════════════════╝\n";
+
     setlocale(LC_ALL, "Russian");
+
     int choice;
     double value;
+
     do {
-        cout << "\n=== Вариант 61: конвертер температур ===\n";
-        cout << "1. Цельсий - Фаренгейт\n";
-        cout << "2. Фаренгейт - Цельсий\n";
+        cout << "\n*** КАЛЬКУЛЯТОР. ВАРИАНТ 61 ***\n";
+        cout << "1. Цельсий -> Фаренгейт\n";
+        cout << "2. Фаренгейт -> Цельсий\n";
+        cout << "3. Цельсий -> Кельвин\n";      
+        cout << "4. Кельвин -> Цельсий\n";       
         cout << "0. Выход\n";
         cout << "Выберите пункт: ";
         cin >> choice;
@@ -48,12 +50,12 @@ int main() {
             cin >> value;
             cout << value << " °F = " << fToC(value) << " °C\n";
             break;
-        case 3:
+        case 3: 
             cout << "Введите температуру в Цельсиях: ";
             cin >> value;
             cout << value << " °C = " << cToK(value) << " K\n";
             break;
-        case 4:
+        case 4: 
             cout << "Введите температуру в Кельвинах: ";
             cin >> value;
             if (value < 0) {
