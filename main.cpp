@@ -1,6 +1,7 @@
 ﻿
 // Вариант 61.
-// Yaroslav Aksenov,ПИ-53.
+// Автор: Yaroslav Aksenov, ПИ-53
+// Yaroslav Aksenov, ПИ-53.
 #include <iostream>
 #include <clocale>  
 using namespace std;
