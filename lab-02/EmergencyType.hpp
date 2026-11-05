@@ -13,26 +13,26 @@ namespace emergency
         int m_dangerLevel{ 1 };
 
     public:
-        // Êîíñòðóêòîð ñ ïàðàìåòðàìè
+        // ÐšÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ Ñ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð°Ð¼Ð¸
         EmergencyType(int id, std::string_view name, std::string_view category, int dangerLevel);
 
-        // Êîíñòðóêòîð ïî óìîë÷àíèþ
+        // ÐšÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ Ð¿Ð¾ ÑƒÐ¼Ð¾Ð»Ñ‡Ð°Ð½Ð¸ÑŽ
         EmergencyType();
 
-        // Äåñòðóêòîð
+        // Ð”ÐµÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€
         ~EmergencyType();
 
 
-        // Ãåòòåðû
+        // Ð“ÐµÑ‚Ñ‚ÐµÑ€Ñ‹
         [[nodiscard]] int GetId() const;
         [[nodiscard]] std::string_view GetName() const;
         [[nodiscard]] std::string_view GetCategory() const;
         [[nodiscard]] int GetDangerLevel() const;
 
-        // Ñåòòåð ñ ïðîâåðêîé ïðàâèëà
-        void SetDangerLevel(int level);  // Ïðàâèëî: óðîâåíü îò 1 äî 5
+        // Ð¡ÐµÑ‚Ñ‚ÐµÑ€ Ñ Ð¿Ñ€Ð¾Ð²ÐµÑ€ÐºÐ¾Ð¹ Ð¿Ñ€Ð°Ð²Ð¸Ð»Ð°
+        void SetDangerLevel(int level);  // ÐŸÑ€Ð°Ð²Ð¸Ð»Ð¾: ÑƒÑ€Ð¾Ð²ÐµÐ½ÑŒ Ð¾Ñ‚ 1 Ð´Ð¾ 5
 
-        // Ñîäåðæàòåëüíûé ìåòîä
-        [[nodiscard]] bool IsHighDanger() const;  // true, åñëè óðîâåíü >= 4
+        // Ð¡Ð¾Ð´ÐµÑ€Ð¶Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ð¹ Ð¼ÐµÑ‚Ð¾Ð´
+        [[nodiscard]] bool IsHighDanger() const;  // true, ÐµÑÐ»Ð¸ ÑƒÑ€Ð¾Ð²ÐµÐ½ÑŒ >= 4
     };
 } // namespace emergency

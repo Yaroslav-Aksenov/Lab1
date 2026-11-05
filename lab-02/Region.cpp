@@ -10,22 +10,22 @@ namespace emergency
         , m_factorCount{ 0 }
         , m_emergencyType{ nullptr }
     {
-        std::cout << "[Region] Ñîçäàí: " << m_name << "\n";
+        std::cout << "[Region] Ð¡Ð¾Ð·Ð´Ð°Ð½: " << m_name << "\n";
     }
 
     Region::Region()
-        : m_name{ "Íåèçâåñòíûé" }
+        : m_name{ "ÐÐµÐ¸Ð·Ð²ÐµÑÑ‚Ð½Ñ‹Ð¹" }
         , m_code{ "00" }
         , m_population{ 0 }
         , m_factorCount{ 0 }
         , m_emergencyType{ nullptr }
     {
-        std::cout << "[Region] Ñîçäàí ïóñòîé ðåãèîí\n";
+        std::cout << "[Region] Ð¡Ð¾Ð·Ð´Ð°Ð½ Ð¿ÑƒÑÑ‚Ð¾Ð¹ Ñ€ÐµÐ³Ð¸Ð¾Ð½\n";
     }
 
     Region::~Region()
     {
-        std::cout << "[Region] Óíè÷òîæåí: " << m_name << " (ôàêòîðîâ: " << m_factorCount << ")\n";
+        std::cout << "[Region] Ð£Ð½Ð¸Ñ‡Ñ‚Ð¾Ð¶ÐµÐ½: " << m_name << " (Ñ„Ð°ÐºÑ‚Ð¾Ñ€Ð¾Ð²: " << m_factorCount << ")\n";
     }
 
     std::string_view Region::GetName() const { return m_name; }
@@ -43,12 +43,12 @@ namespace emergency
     {
         if (m_factorCount >= 10)
         {
-            std::cout << "[Îøèáêà] Íåëüçÿ äîáàâèòü áîëüøå 10 ôàêòîðîâ\n";
+            std::cout << "[ÐžÑˆÐ¸Ð±ÐºÐ°] ÐÐµÐ»ÑŒÐ·Ñ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð±Ð¾Ð»ÑŒÑˆÐµ 10 Ñ„Ð°ÐºÑ‚Ð¾Ñ€Ð¾Ð²\n";
             return;
         }
         m_factors[m_factorCount] = factor;
         m_factorCount++;
-        std::cout << "[Region] Äîáàâëåí ôàêòîð: " << factor.GetName() << "\n";
+        std::cout << "[Region] Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½ Ñ„Ð°ÐºÑ‚Ð¾Ñ€: " << factor.GetName() << "\n";
     }
 
     bool Region::RemoveFactor(std::string_view factorName)
@@ -62,11 +62,11 @@ namespace emergency
                     m_factors[j] = m_factors[j + 1];
                 }
                 m_factorCount--;
-                std::cout << "[Region] Óäàë¸í ôàêòîð: " << factorName << "\n";
+                std::cout << "[Region] Ð£Ð´Ð°Ð»Ñ‘Ð½ Ñ„Ð°ÐºÑ‚Ð¾Ñ€: " << factorName << "\n";
                 return true;
             }
         }
-        std::cout << "[Îøèáêà] Ôàêòîð íå íàéäåí: " << factorName << "\n";
+        std::cout << "[ÐžÑˆÐ¸Ð±ÐºÐ°] Ð¤Ð°ÐºÑ‚Ð¾Ñ€ Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½: " << factorName << "\n";
         return false;
     }
 
@@ -83,8 +83,8 @@ namespace emergency
     std::string Region::GetRiskLevel() const
     {
         double risk = GetTotalRisk();
-        if (risk < 1.0) return "íèçêèé";
-        if (risk < 2.0) return "ñðåäíèé";
-        return "âûñîêèé";
+        if (risk < 1.0) return "Ð½Ð¸Ð·ÐºÐ¸Ð¹";
+        if (risk < 2.0) return "ÑÑ€ÐµÐ´Ð½Ð¸Ð¹";
+        return "Ð²Ñ‹ÑÐ¾ÐºÐ¸Ð¹";
     }
 } // namespace emergency

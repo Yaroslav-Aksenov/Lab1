@@ -9,21 +9,21 @@ namespace emergency
         , m_category{ category }
         , m_dangerLevel{ dangerLevel }
     {
-        std::cout << "[EmergencyType] Ñîçäàí: " << m_name << "\n";
+        std::cout << "[EmergencyType] Ð¡Ð¾Ð·Ð´Ð°Ð½: " << m_name << "\n";
     }
 
     EmergencyType::EmergencyType()
         : m_id{ 0 }
-        , m_name{ "Íåèçâåñòíûé" }
-        , m_category{ "Íåèçâåñòíî" }
+        , m_name{ "ÐÐµÐ¸Ð·Ð²ÐµÑÑ‚Ð½Ñ‹Ð¹" }
+        , m_category{ "ÐÐµÐ¸Ð·Ð²ÐµÑÑ‚Ð½Ð¾" }
         , m_dangerLevel{ 1 }
     {
-        std::cout << "[EmergencyType] Ñîçäàí ïóñòîé òèï\n";
+        std::cout << "[EmergencyType] Ð¡Ð¾Ð·Ð´Ð°Ð½ Ð¿ÑƒÑÑ‚Ð¾Ð¹ Ñ‚Ð¸Ð¿\n";
     }
 
     EmergencyType::~EmergencyType()
     {
-        std::cout << "[EmergencyType] Óíè÷òîæåí: " << m_name << "\n";
+        std::cout << "[EmergencyType] Ð£Ð½Ð¸Ñ‡Ñ‚Ð¾Ð¶ÐµÐ½: " << m_name << "\n";
     }
 
     int EmergencyType::GetId() const { return m_id; }
@@ -33,10 +33,10 @@ namespace emergency
 
     void EmergencyType::SetDangerLevel(int level)
     {
-        // Ïðàâèëî: óðîâåíü îïàñíîñòè îò 1 äî 5
+        // ÐŸÑ€Ð°Ð²Ð¸Ð»Ð¾: ÑƒÑ€Ð¾Ð²ÐµÐ½ÑŒ Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑ‚Ð¸ Ð¾Ñ‚ 1 Ð´Ð¾ 5
         if (level < 1 || level > 5)
         {
-            std::cout << "[Îøèáêà] Óðîâåíü îïàñíîñòè äîëæåí áûòü îò 1 äî 5, ïîëó÷åíî: " << level << "\n";
+            std::cout << "[ÐžÑˆÐ¸Ð±ÐºÐ°] Ð£Ñ€Ð¾Ð²ÐµÐ½ÑŒ Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑ‚Ð¸ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð±Ñ‹Ñ‚ÑŒ Ð¾Ñ‚ 1 Ð´Ð¾ 5, Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð¾: " << level << "\n";
             return;
         }
         m_dangerLevel = level;

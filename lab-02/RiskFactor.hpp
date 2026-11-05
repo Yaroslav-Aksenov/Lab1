@@ -13,28 +13,28 @@ namespace emergency
         std::string m_description{};
 
     public:
-        // Êîíñòðóêòîð ñ ïàðàìåòðàìè
+        // ÐšÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ Ñ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ð°Ð¼Ð¸
         RiskFactor(std::string_view name, double value, double weight, std::string_view description);
 
-        // Êîíñòðóêòîð ïî óìîë÷àíèþ
+        // ÐšÐ¾Ð½ÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€ Ð¿Ð¾ ÑƒÐ¼Ð¾Ð»Ñ‡Ð°Ð½Ð¸ÑŽ
         RiskFactor();
 
-        // Äåñòðóêòîð
+        // Ð”ÐµÑÑ‚Ñ€ÑƒÐºÑ‚Ð¾Ñ€
         ~RiskFactor();
 
 
-        // Ãåòòåðû
+        // Ð“ÐµÑ‚Ñ‚ÐµÑ€Ñ‹
         [[nodiscard]] std::string_view GetName() const;
         [[nodiscard]] double GetValue() const;
         [[nodiscard]] double GetWeight() const;
         [[nodiscard]] std::string_view GetDescription() const;
 
-        // Ñåòòåðû ñ ïðîâåðêîé ïðàâèë
+        // Ð¡ÐµÑ‚Ñ‚ÐµÑ€Ñ‹ Ñ Ð¿Ñ€Ð¾Ð²ÐµÑ€ÐºÐ¾Ð¹ Ð¿Ñ€Ð°Ð²Ð¸Ð»
         void SetValue(double value);
-        void SetWeight(double weight);  // Ïðàâèëî: âåñ îò 0 äî 1
+        void SetWeight(double weight);  // ÐŸÑ€Ð°Ð²Ð¸Ð»Ð¾: Ð²ÐµÑ Ð¾Ñ‚ 0 Ð´Ð¾ 1
 
-        // Ñîäåðæàòåëüíûå ìåòîäû
+        // Ð¡Ð¾Ð´ÐµÑ€Ð¶Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ðµ Ð¼ÐµÑ‚Ð¾Ð´Ñ‹
         [[nodiscard]] double GetContribution() const;  // value * weight
-        [[nodiscard]] bool IsCritical() const;         // true, åñëè âêëàä > 0.7
+        [[nodiscard]] bool IsCritical() const;         // true, ÐµÑÐ»Ð¸ Ð²ÐºÐ»Ð°Ð´ > 0.7
     };
 } // namespace emergency

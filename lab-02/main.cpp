@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <clocale>
 #include "RiskFactor.hpp"
 #include "EmergencyType.hpp"
