@@ -35,3 +35,19 @@ out/
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
+
+# C#
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+.vs/
+
+# C++
+x64/
+Debug/
+Release/
+*.obj
+*.exe
+*.pdb
+*.ilk
